@@ -9,13 +9,13 @@ const restrict = require("./middleware/restrict")
 
 const server = express()
 const port = process.env.PORT || 5000
-// always comment this out before commit. 
+// always comment this out before pushing commits. 
 // conflicts with heroku
 // require('dotenv').config()
 server.use(helmet())
 server.use(cookieParser())
 server.use(express.json())
-// always put this code back before commit. comment out for localhost testing
+// always put this code back before pushing commits. comment out for localhost testing
 // CHANGE FOR DEPLOY BASED ON FRONTEND DEPLOY URL. 
 // // not until frontend is done or for testing
 server.use((req, res, next) => {
